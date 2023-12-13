@@ -1,3 +1,6 @@
+0x16. C - Simple Shell
+
+
 A simple shell in C programming refers to a basic implementation of a command-line interpreter, akin to a minimal version of the Unix shell (like Bash or sh). A shell is a program that provides an interface for users to interact with an operating system by taking commands as inputs, executing them, and displaying the output to the user.
 
 A simple shell typically performs the following basic functionalities:
@@ -9,3 +12,10 @@ Parsing: It reads user input, tokenizes it, and identifies the command and its a
 Environment Management: It handles environment variables that store information like paths, user settings, etc.
 
 I/O Redirection and Piping: It supports input/output redirection and piping for chaining multiple commands together.
+
+COPYRIGHT
+Copyright (C) 2023 by elan jaja akuneho
+All rights reserved
+
+Description :
+This is a shell written in C. It is based on the Thompson Shell.
