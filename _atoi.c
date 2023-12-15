@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * interactive_mode - returns true if shell is interactive mode
+ * interactive - returns true if shell is interactive mode
  * @data: struct address
  *
  * Return: 1 if interactive mode, 0 otherwise
  */
-int interactive_mode(data_t *data)
+int interactive(data_t *data)
 {
 	return (isatty(STDIN_FILENO) && data->readfd <= 2);
 }

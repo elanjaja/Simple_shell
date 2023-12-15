@@ -56,12 +56,12 @@ int my_setenv(data_t *data)
 }
 
 /**
- * my_unsetenv - Removes an environment variable
+ * _myunsetenv - Removes an environment variable
  * @data: A framework that holds possible parameters,
  * utilized to uphold consistent function format.
  *  Return: Always return 0
  */
-int my_unsetenv(data_t *data)
+int _myunsetenv(data_t *data)
 {
 	int a;
 

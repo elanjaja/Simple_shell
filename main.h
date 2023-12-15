@@ -161,7 +161,7 @@ void *_realloc(void *, unsigned int, unsigned int);
 int freeAndNullPtr(void **);
 
 /* toem_atoi.c */
-int interactive_mood(data_t *);
+int interactive(data_t *);
 int delimeter(char, char *);
 int alphabetic(int);
 int _atoi(char *);

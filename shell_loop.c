@@ -15,7 +15,7 @@ int hsh(data_t *data, char **av)
 	while (rs != -1 && builtin_return != -2)
 	{
 		clear_data(data);
-		if (!interactive_mood(data))
+		if (!interactive(data))
 			print_string("$ ");
 		error_putchar(BUF_FLUSH);
 		rs = get_input(data);
@@ -26,13 +26,13 @@ int hsh(data_t *data, char **av)
 			if (builtin_return == -1)
 				find_cmd(data);
 		}
-		else if (!interactive_mood(data))
+		else if (!interactive(data))
 			write_character('\n');
 		free_data(data, 0);
 	}
 	write_history(data);
 	free_data(data, 1);
-	if (!interactive_mood(data) && data->status)
+	if (!interactive(data) && data->status)
 		exit(data->status);
 	if (builtin_return == -2)
 	{
@@ -108,7 +108,7 @@ void find_cmd(data_t *data)
 	}
 	else
 	{
-		if ((interactive_mood(data) || get_environ(data, "PATH=")
+		if ((interactive(data) || get_environ(data, "PATH=")
 			|| data->argv[0][0] == '/') && executable(data, data->argv[0]))
 			execute_command(data);
 		else if (*(data->arg) != '\n')
