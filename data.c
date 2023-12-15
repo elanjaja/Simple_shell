@@ -66,7 +66,7 @@ void free_data(data_t *data, int af)
 			free_list_node(&(data->alias));
 		free_string(data->environ);
 			data->environ = NULL;
-		freep((void **)data->cmd_buf);
+		freeAndNullPtr((void **)data->cmd_buf);
 		if (data->readfd > 2)
 			close(data->readfd);
 		write_character(BUF_FLUSH);

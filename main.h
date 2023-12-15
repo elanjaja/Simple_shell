@@ -157,8 +157,8 @@ char *_memset(char *, char, unsigned int);
 void free_string(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
-/* toem_free.c */
-int bfree(void **);
+/* toem_memory_free.c */
+int freeAndNullPtr(void **);
 
 /* toem_atoi.c */
 int interactive_mood(data_t *);
@@ -211,14 +211,14 @@ int read_history(data_t *data);
 int build_history(data_t *data, char *buf, int linecount);
 int renumber_history(data_t *data);
 
-/* toem_node.c */
+/* toem_list.c */
 list_t *add_node(list_t **, const char *, int);
 list_t *add_node_at_end(list_t **, const char *, int);
 size_t print_list_string(const list_t *);
 int delete_node_index(list_t **, unsigned int);
 void free_list_node(list_t **);
 
-/* toem_node1.c */
+/* toem_list1.c */
 size_t length_list(const list_t *);
 char **list_to_strings(list_t *);
 size_t print_list(const list_t *);
