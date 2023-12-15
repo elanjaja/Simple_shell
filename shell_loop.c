@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * shell_loop - main shell loop
+ * hsh - main shell loop
  * @data: the parameter and return data struct
  * @av: the argument vector from main()
  *
  * Return: 0 on success, 1 on error, or error code
  */
-int shell_loop(data_t *data, char **av)
+int hsh(data_t *data, char **av)
 {
 	ssize_t rs = 0;
 	int builtin_return = 0;

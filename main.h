@@ -111,8 +111,8 @@ typedef struct builtin
 } builtin_table;
 
 
-/* toem_hsh.c */
-int shell_loop(data_t *, char **);
+/* toem_shell_loop.c */
+int hsh(data_t *, char **);
 int find_builtin_command(data_t *);
 void find_cmd(data_t *);
 void execute_command(data_t *);

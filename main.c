@@ -39,6 +39,6 @@ int main(int ac, char **av)
 	}
 	populate_env(data);
 	read_history(data);
-	shell_loop(data, av);
+	hsh(data, av);
 	return (EXIT_SUCCESS);
 }
