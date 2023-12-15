@@ -111,7 +111,7 @@ typedef struct builtin
 } builtin_table;
 
 
-/* toem_shloop.c */
+/* toem_hsh.c */
 int shell_loop(data_t *, char **);
 int find_builtin_command(data_t *);
 void find_cmd(data_t *);
@@ -125,19 +125,19 @@ char *find_path(data_t *, char *, char *);
 /* loophsh.c */
 int loophsh(char **);
 
-/* toem_errors.c */
+/* toem_error1.c */
 void error_puts(char *);
 int error_putchar(char);
 int _putfd(char c, int fd);
 int _putsfd(char *str, int fd);
 
-/* toem_string.c */
+/* toem_string1.c */
 int string_length(char *);
 int string_compare(char *, char *);
 char *starts_with(const char *, const char *);
 char *_catstr(char *, char *);
 
-/* toem_string1.c */
+/* toem_string2.c */
 char *copy_string(char *, char *);
 char *_strdup(const char *);
 void print_string(char *);
@@ -148,16 +148,16 @@ char *_cpystr(char *, char *, int);
 char *_strncat(char *, char *, int);
 char *str_chr(char *, char);
 
-/* toem_tokenizer.c */
+/* toem_split_string.c */
 char **split_string(char *, char *);
 char **split_string_alt(char *, char);
 
-/* toem_realloc.c */
+/* toem_memset.c */
 char *_memset(char *, char, unsigned int);
 void free_string(char **);
 void *_realloc(void *, unsigned int, unsigned int);
 
-/* toem_memory.c */
+/* toem_free.c */
 int bfree(void **);
 
 /* toem_atoi.c */
@@ -166,40 +166,40 @@ int delimeter(char, char *);
 int alphabetic(int);
 int _atoi(char *);
 
-/* toem_errors1.c */
+/* toem_error2.c */
 int _erratoi(char *);
 void print_error(data_t *, char *);
 int print_decimal(int, int);
 char *convert_string(long int, int, int);
 void replace_comments(char *);
 
-/* toem_builtin.c */
+/* toem_builtin1.c */
 int shell_exit(data_t *);
 int my_cd(data_t *);
 int my_help(data_t *);
 
-/* toem_builtin1.c */
+/* toem_builtin2.c */
 int display_history(data_t *);
 int manage_alias(data_t *);
 
-/*toem_getline.c */
+/*toem_getinput.c */
 ssize_t get_input(data_t *);
 int _getline(data_t *, char **, size_t *);
 void interruptHandler(int);
 
-/* toem_getinfo.c */
+/* toem_data.c */
 void clear_data(data_t *);
 void set_data(data_t *, char **);
 void free_data(data_t *, int);
 
-/* toem_environ.c */
+/* toem_my_environ.c */
 char *get_environ(data_t *, const char *);
 int print_env(data_t *);
 int my_setenv(data_t *);
 int _myunsetenv(data_t *);
 int populate_env(data_t *);
 
-/* toem_getenv.c */
+/* toem_environ_string.c */
 char **environ_string(data_t *);
 int unset_env(data_t *, char *);
 int set_env(data_t *, char *, char *);
@@ -211,14 +211,14 @@ int read_history(data_t *data);
 int build_history(data_t *data, char *buf, int linecount);
 int renumber_history(data_t *data);
 
-/* toem_lists.c */
+/* toem_node.c */
 list_t *add_node(list_t **, const char *, int);
 list_t *add_node_at_end(list_t **, const char *, int);
 size_t print_list_string(const list_t *);
 int delete_node_index(list_t **, unsigned int);
 void free_list_node(list_t **);
 
-/* toem_lists1.c */
+/* toem_node1.c */
 size_t length_list(const list_t *);
 char **list_to_strings(list_t *);
 size_t print_list(const list_t *);
