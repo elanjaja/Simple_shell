@@ -2,7 +2,7 @@
 
 /**
  * buffer_input - buffers chained commands
- * @info: parameter struct
+ * @data: parameter struct
  * @buf: address of buffer
  * @len: address of len var
  *

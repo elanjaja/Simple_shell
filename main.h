@@ -51,23 +51,25 @@ typedef struct liststr
 } list_t;
 
 /**
- *struct passdata -  includes placeholder values meant for passing into a function,
- *    enabling a consistent prototype for a function pointer structure.
+ *struct passdata -  includes placeholder values meant for passing into a
+ function, enabling a consistent prototype for a pointer structure.
  *@arg: represents a string derived from 'getline' that holds arguments.
  *@argv: contains a string array created from the arguments passed.
  *@path: denotes a string pathway for the ongoing command.
  *@argc: represents the number of arguments passed to a program or function.
- *@linecount: denotes the quantity of errors found within a specific set of lines or code.
+ *@linecount: the error count
  *@err_num: the error code used for exiting functions exit()s
- *@linecount_flag: indicates whether to include the current line of input in the counting process.
+ *@linecount_flag: if on count this line of input
  *@fname: the program filename
- *@env: Create a linked list that contains a localized copy of the environment variables.
- *@environ: Generate a customized and modified version of the environment variables LL env
+ *@env: linked list that contain a local copy of env variables.
+ *@environ: Generate a modified version of env variables LL env
  *@history: The node representing historical data
  *@alias: an alias node
- *@env_changed: If there has been a modification to the environment, then the statement is active.
+ *@env_changed: If there has been a modification to the environment,
+ then the statement is active.
  *@status: reflects the execution status of the most recent command
- *@cmd_buf:  active when referencing the pointer to cmd_buffer in a chained context
+ *@cmd_buf:  active when referencing the pointer to
+ cmd_buffer in a chained context
  *@cmd_buf_type: CMD_type ||, &&, ;
  *@readfd: the file descriptor used for reading line input.
  *@histcount: the total count of historical line numbers.
