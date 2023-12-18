@@ -203,8 +203,8 @@ int populate_env(data_t *);
 
 /* toem_environ_string.c */
 char **environ_string(data_t *);
-int unset_env(data_t *, char *);
-int set_env(data_t *, char *, char *);
+int _unsetenv(data_t *, char *);
+int _setenv(data_t *, char *, char *);
 
 /* toem_history.c */
 char *get_history(data_t *data);

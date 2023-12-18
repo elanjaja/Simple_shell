@@ -18,13 +18,13 @@ char **environ_string(data_t *data)
 }
 
 /**
- * unset_env - Remove an environment variable
+ * _unsetenv - Remove an environment variable
  * @data: A framework that holds possible parameters,
  *  utilized to uphold consistent function format.
  * @var: The string representing the environment variable to be removed
  * Return: 1 on deletion, 0 otherwise
  */
-int unset_env(data_t *data, char *var)
+int _unsetenv(data_t *data, char *var)
 {
 	list_t *node = data->env;
 	size_t a = 0;
@@ -50,7 +50,7 @@ int unset_env(data_t *data, char *var)
 }
 
 /**
- * set_env - Initialize a new environment variable,
+ * _setenv - Initialize a new environment variable,
  *  or modify an existing one
  * @data: A framework that holds possible parameters,
  *  utilized to uphold consistent function format.
@@ -58,7 +58,7 @@ int unset_env(data_t *data, char *var)
  * @value: The string representing the environment variable value
  *  Return: Always return 0
  */
-int set_env(data_t *data, char *var, char *value)
+int _setenv(data_t *data, char *var, char *value)
 {
 	char *buf = NULL;
 	list_t *node;

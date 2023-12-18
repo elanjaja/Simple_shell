@@ -50,7 +50,7 @@ int my_setenv(data_t *data)
 		error_puts("wrong number of arguements\n");
 		return (1);
 	}
-	if (set_env(data, data->argv[1], data->argv[2]))
+	if (_setenv(data, data->argv[1], data->argv[2]))
 		return (0);
 	return (1);
 }
@@ -71,7 +71,7 @@ int _myunsetenv(data_t *data)
 		return (1);
 	}
 	for (a = 1; a <= data->argc; a++)
-		unset_env(data, data->argv[a]);
+		_unsetenv(data, data->argv[a]);
 
 	return (0);
 }
